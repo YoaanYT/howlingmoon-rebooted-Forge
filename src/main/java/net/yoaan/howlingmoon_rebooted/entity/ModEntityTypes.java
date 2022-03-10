@@ -16,7 +16,7 @@ public class ModEntityTypes {
 
     public static final RegistryObject<EntityType<WerewolfEntity>> WEREWOLF = ENTITY_TYPES.register("werewolf",
             () -> EntityType.Builder.of(WerewolfEntity::new, MobCategory.MONSTER)
-                    .sized(1.01f, 1.01f)
+                    .sized(1.0f, 1.0f)
                     .build(new ResourceLocation(howlingmoon_rebooted.MOD_ID, "werewolf").toString()));
 
 
