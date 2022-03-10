@@ -46,6 +46,11 @@ public class ModConfiguredFeature {
                     new RandomPatchConfiguration(32, 6, 2, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
                             new SimpleBlockConfiguration(BlockStateProvider.simple(ModBlocks.WOLFSBANE.get())))));
 
+    public static final Holder<ConfiguredFeature<RandomPatchConfiguration, ?>> HUNTER_BANNER =
+            FeatureUtils.register("flower_hunter_banner", Feature.FLOWER,
+                    new RandomPatchConfiguration(32, 6, 2, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
+                            new SimpleBlockConfiguration(BlockStateProvider.simple(ModBlocks.HUNTER_BANNER.get())))));
+
     public static final List<OreConfiguration.TargetBlockState> OVERWORLD_SILVER_ORES = List.of(
             OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, ModBlocks.SILVER_ORE.get().defaultBlockState()),
             OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, ModBlocks.DEEPSLATE_SILVER_ORE.get().defaultBlockState()));

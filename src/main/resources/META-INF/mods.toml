@@ -56,3 +56,9 @@ howlingmoon mod was or is forgotten in the year 2018 and we recreated it from 0 
     versionRange="[1.18.2,1.19)"
     ordering="NONE"
     side="BOTH"
+[[dependencies.howlingmoon_rebooted]]
+        modId="geckolib3"
+        mandatory=true
+        versionRange="[3.0.12,)"
+        ordering="AFTER"
+        side="BOTH"

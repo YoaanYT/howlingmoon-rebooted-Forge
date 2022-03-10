@@ -18,6 +18,10 @@ public class ModPlacedFeatures {
             ModConfiguredFeature.WOLFSBANE, RarityFilter.onAverageOnceEvery(16),
             InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome());
 
+    public static final Holder<PlacedFeature> HUNTER_BANNER_PLACED = PlacementUtils.register("hunter_banner_placed",
+            ModConfiguredFeature.HUNTER_BANNER, RarityFilter.onAverageOnceEvery(16),
+            InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome());
+
     public static final Holder<PlacedFeature> SILVER_ORE_PLACED = PlacementUtils.register("silver_ore_placed",
             ModConfiguredFeature.SILVER_ORE, ModOrePlacement
                     .commonOrePlacement(HowlingmoonRebootedCommonConfigs.SILVER_ORE_VEINS_PER_CHUNK.get(), // VeinsPerChunk

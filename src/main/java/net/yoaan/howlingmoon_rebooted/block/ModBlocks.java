@@ -79,8 +79,8 @@ public class ModBlocks {
             ModCreativeModeTab.HOWLINGMOONREBOOTED_TAB);
 
     public static final RegistryObject<Block> HUNTER_BANNER = registerBlock("hunter_banner",
-            () -> new Block(BlockBehaviour.Properties.of(Material.WOOD)
-                    .strength(1f).requiresCorrectToolForDrops()), ModCreativeModeTab.HOWLINGMOONREBOOTED_TAB);
+            () -> new FlowerBlock(MobEffects.REGENERATION, 200,
+                    BlockBehaviour.Properties.copy(Blocks.POPPY)), ModCreativeModeTab.HOWLINGMOONREBOOTED_TAB);
 
     public static final RegistryObject<Block> RAW_SILVER_BLOCK = registerBlock("raw_silver_block",
             () -> new Block(BlockBehaviour.Properties.of(Material.METAL)

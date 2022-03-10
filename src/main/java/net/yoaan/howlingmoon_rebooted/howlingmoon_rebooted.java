@@ -63,6 +63,7 @@ public class howlingmoon_rebooted
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.SILVER_TRAPDOOR.get(), RenderType.cutout());
 
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.WOLFSBANE.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.HUNTER_BANNER.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.POTTED_WOLFSBANE.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.DRIED_OAK_LEAVES.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.DRIED_OAK_SAPLING.get(), RenderType.cutout());

@@ -11,7 +11,6 @@ import net.minecraftforge.common.BiomeDictionary;
 import net.minecraftforge.event.world.BiomeLoadingEvent;
 import java.util.List;
 import java.util.Set;
-import java.util.function.Supplier;
 
 public class ModFlowerGeneration {
     public static void generateFlowers(final BiomeLoadingEvent event) {
@@ -24,6 +23,7 @@ public class ModFlowerGeneration {
                     event.getGeneration().getFeatures(GenerationStep.Decoration.VEGETAL_DECORATION);
 
             base.add(ModPlacedFeatures.WOLFSBANE_PLACED);
+            base.add(ModPlacedFeatures.HUNTER_BANNER_PLACED);
         }
     }
 }

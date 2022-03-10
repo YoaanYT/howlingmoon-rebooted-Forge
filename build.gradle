@@ -141,7 +141,6 @@ repositories {
     //     dir 'libs'
     // }
     maven { url 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/' }
-
 }
 dependencies {
     implementation 'io.github.codejanovic:java-predicates:0.1.0'
@@ -157,9 +156,9 @@ dependencies {
 
     // Real mod deobf dependency examples - these get remapped to your current mappings
     // compile against the JEI API but do not include it at runtime
-    compileOnly fg.deobf("mezz.jei:jei-1.18.1:9.3.3.95:api")
+    compileOnly fg.deobf("mezz.jei:jei-1.18.2:9.5.0.132:api")
     // at runtime, use the full JEI jar
-    runtimeOnly fg.deobf("mezz.jei:jei-1.18.1:9.3.3.95")
+    runtimeOnly fg.deobf("mezz.jei:jei-1.18.2:9.5.0.132")
     // implementation fg.deobf("com.tterrag.registrate:Registrate:MC${mc_version}-${registrate_version}") // Adds registrate as a dependency
 
     // Examples using mod jars from ./libs
