@@ -23,7 +23,6 @@ public class ModFlowerGeneration {
                     event.getGeneration().getFeatures(GenerationStep.Decoration.VEGETAL_DECORATION);
 
             base.add(ModPlacedFeatures.WOLFSBANE_PLACED);
-            base.add(ModPlacedFeatures.HUNTER_BANNER_PLACED);
         }
     }
 }
