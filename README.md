@@ -19,7 +19,7 @@ es_mx: 100%
 credits: YoaanYT(creator), shimonsolo and owlder
 web pag credits: yoaanYT, shimonsolo and owlder
 textures: owlder
-code: Yoaan
+code: YoaanYT
 
 if you have this versions of the mod: og mod all versions, and howlingmoon rebooted 0.9.1.2-0.9.2.3 and update to 0.9.3.x all items, entities and block they will disappear 
 because i change the code of howlingmoon: to howlingmoon_rebooted:
