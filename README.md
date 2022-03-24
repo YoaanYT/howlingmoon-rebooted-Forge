@@ -32,3 +32,5 @@ if you have this versions of the mod: og mod all versions, and howlingmoon reboo
 because i change the code of howlingmoon: to howlingmoon_rebooted:
 
 if you want to help with the mod you can contact me in my youtube chanel or my twitter (@YoaanYT in twitter and YoaanMC in youtube)
+
+i speek spanish(my main language) and english
