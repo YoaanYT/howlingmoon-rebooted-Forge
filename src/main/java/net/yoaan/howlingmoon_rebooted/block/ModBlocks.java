@@ -16,6 +16,8 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.yoaan.howlingmoon_rebooted.block.custom.ModFlammableRotatedPillarBlock;
+import net.yoaan.howlingmoon_rebooted.block.custom.ModStandingSignBlock;
+import net.yoaan.howlingmoon_rebooted.block.custom.ModWallSignBlock;
 import net.yoaan.howlingmoon_rebooted.howlingmoon_rebooted;
 import net.yoaan.howlingmoon_rebooted.item.ModCreativeModeTab;
 import net.yoaan.howlingmoon_rebooted.item.ModItems;
@@ -176,6 +178,12 @@ public class ModBlocks {
             () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING,
                     BlockBehaviour.Properties.of(Material.WOOD)
                             .strength(0.2f).requiresCorrectToolForDrops()), ModCreativeModeTab.HOWLINGMOONREBOOTED_TAB);
+
+    public static final RegistryObject<Block> DRIED_OAK_SIGN = BLOCKS.register("dried_oak_sign",
+            () -> new ModStandingSignBlock(BlockBehaviour.Properties.of(Material.WOOD), ModWoodTypes.DRIED_OAK));
+
+    public static final RegistryObject<Block> DRIED_OAK_WALL_SIGN = BLOCKS.register("dried_oak_wall_sign",
+            () -> new ModWallSignBlock(BlockBehaviour.Properties.of(Material.WOOD), ModWoodTypes.DRIED_OAK));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

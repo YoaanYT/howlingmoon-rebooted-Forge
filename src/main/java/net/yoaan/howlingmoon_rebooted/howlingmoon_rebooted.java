@@ -3,12 +3,16 @@ package net.yoaan.howlingmoon_rebooted;
 import com.google.common.collect.ImmutableMap;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.Sheets;
+import net.minecraft.client.renderer.blockentity.BlockEntityRenderers;
+import net.minecraft.client.renderer.blockentity.SignRenderer;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.client.renderer.entity.layers.RenderLayer;
 import net.minecraft.world.item.AxeItem;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.FlowerPotBlock;
+import net.minecraft.world.level.block.state.properties.WoodType;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.ModLoadingContext;
@@ -18,6 +22,8 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.yoaan.howlingmoon_rebooted.block.ModBlocks;
+import net.yoaan.howlingmoon_rebooted.block.ModWoodTypes;
+import net.yoaan.howlingmoon_rebooted.block.entity.ModBlockEntities;
 import net.yoaan.howlingmoon_rebooted.config.HowlingmoonRebootedClientConfigs;
 import net.yoaan.howlingmoon_rebooted.config.HowlingmoonRebootedCommonConfigs;
 import net.yoaan.howlingmoon_rebooted.entity.ModEntityTypes;
@@ -46,11 +52,13 @@ public class howlingmoon_rebooted
 
         ModEntityTypes.register(eventBus);
 
+        ModBlockEntities.register(eventBus);
+
         eventBus.addListener(this::setup);
         eventBus.addListener(this::setupClient);
 
-        ModLoadingContext.get().registerConfig(ModConfig.Type.CLIENT, HowlingmoonRebootedClientConfigs.SPEC, "mccourse-client.toml");
-        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, HowlingmoonRebootedCommonConfigs.SPEC, "mccourse-common.toml");
+        ModLoadingContext.get().registerConfig(ModConfig.Type.CLIENT, HowlingmoonRebootedClientConfigs.SPEC, "howlingmoonrebooted-client.toml");
+        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, HowlingmoonRebootedCommonConfigs.SPEC, "howlingmoonrebooted-common.toml");
 
 
 
@@ -71,6 +79,8 @@ public class howlingmoon_rebooted
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.DRIED_OAK_TRAPDOOR.get(), RenderType.cutout());
 
         EntityRenderers.register(ModEntityTypes.WEREWOLF.get(), WerewolfRenderer::new);
+
+        WoodType.register(ModWoodTypes.DRIED_OAK);
     }
 
 
@@ -82,6 +92,9 @@ public class howlingmoon_rebooted
                     .put(ModBlocks.DRIED_OAK_WOOD.get(), ModBlocks.STRIPPED_DRIED_OAK_WOOD.get()).build();
 
             ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.WOLFSBANE.getId(), ModBlocks.POTTED_WOLFSBANE);
+
+            BlockEntityRenderers.register(ModBlockEntities.SIGN_BLOCK_ENTITIES.get(), SignRenderer::new);
+            Sheets.addWoodType(ModWoodTypes.DRIED_OAK);
         });
     }
 }

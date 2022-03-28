@@ -7,6 +7,7 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;;
+import net.yoaan.howlingmoon_rebooted.block.ModBlocks;
 import net.yoaan.howlingmoon_rebooted.entity.ModEntityTypes;
 import net.yoaan.howlingmoon_rebooted.howlingmoon_rebooted;
 
@@ -74,6 +75,10 @@ public class ModItems {
     public static final RegistryObject<ForgeSpawnEggItem> WEREWOLF_SPAWN_EGG = ITEMS.register("werewolf_spawn_egg",
             () -> new ForgeSpawnEggItem(ModEntityTypes.WEREWOLF,0xFFFFFF, 0x111111,
                     new Item.Properties().tab(ModCreativeModeTab.HOWLINGMOONREBOOTED_TAB)));
+
+    public static final RegistryObject<Item> DRIED_OAK_SIGN_ITEM = ITEMS.register("dried_oak_sign",
+            () -> new SignItem(new Item.Properties().tab(ModCreativeModeTab.HOWLINGMOONREBOOTED_TAB).stacksTo(16),
+                    ModBlocks.DRIED_OAK_SIGN.get(), ModBlocks.DRIED_OAK_WALL_SIGN.get()));
 
 
     public static void register(IEventBus eventBus) {
